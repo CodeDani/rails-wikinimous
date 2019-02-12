@@ -1,0 +1,23 @@
+<h1 class="article-title padded">New article</h1>
+<body>
+  <%= form_for(@article) do |f| %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </p>
+<br>
+<br>
+<br>
+  <p>
+    <%= f.label :content %>
+    <%= f.text_area :content, cols: "50", rows: "25" %>
+  </p>
+  <p>
+    <%= f.submit %>
+    <% end %>
+  </p>
+  <p>
+    <%= link_to "Create a new article", articles_new_path  %>
+    <%= link_to "Back to the list", index_path %>
+  </p>
+</body>

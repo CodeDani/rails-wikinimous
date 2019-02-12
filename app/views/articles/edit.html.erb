@@ -1,0 +1,21 @@
+<h1 class="article-title padded">Edit <em><%= @article.title %></em> </h1>
+<%= form_for(@article) do |f| %>
+<p>
+  <%= f.label :title%>
+  <%= f.text_field :title%>
+</p>
+  <br>
+  <br>
+  <br>
+<p>
+  <%= f.label :content %>
+
+    <%= f.text_area :content, cols: "50", rows: "25" %>
+
+
+  <%= f.submit %>
+</p>
+<p>
+  <%= link_to "Back to the list", index_path %>
+</p>
+<% end %>
